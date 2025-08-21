@@ -733,24 +733,6 @@ public class ExtraPoisionBuilder : SkillFactory
 }
 ```
 
-### 关键片段（注释版，示意，不用于编译）
-
-```csharp
-// 片段：按“毒的种类数”增伤
-new EffectExcecuteSkillPro("腐骨劲", Quality.Rare) {
-    DamageRate = 1f, ManaCost = 2 * 300, CD = 2,
-    Discription= "敌人每有一种【毒】，威力+60",
-    AttributeSelector = s => {
-        int types = 0;
-        foreach (var e in s.Loader.GetOpponent().Effects)
-            if (e is PosionEffect) types++;     // ⟪解读⟫ 统计”不同毒“的种类数
-        s.BaseExecute();
-        s.DamageRate += types * 0.6f; // ⟪解读⟫ 临时增加倍率
-        s.BaseExecute();
-        s.DamageRate -= types * 0.6f; // 归还倍率，避免永久叠加
-    }
-};
-```
 
 ---
 
