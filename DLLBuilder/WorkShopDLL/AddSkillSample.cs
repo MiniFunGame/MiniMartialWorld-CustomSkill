@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
+[System.Serializable]
 
 public class SampleTrainingAdder : IWorkshopTrainingModifier
 {
@@ -8,6 +9,7 @@ public class SampleTrainingAdder : IWorkshopTrainingModifier
         return trainingList;
     }
 }
+[System.Serializable]
 
 public class TestSkillBuilder : SkillFactory
 {
@@ -22,7 +24,7 @@ public class TestSkillBuilder : SkillFactory
             DamageRate = 2.0f, // 伤害倍率
             ManaCost = 2 * 400, // 内力消耗
             CD = 2, // 当前冷却时间
-            Discription = "造成强力伤害", // 技能描述
+            Discription = "", // 技能描述
             Preempt = true,
             AttributeSelector = Skill =>
             {
