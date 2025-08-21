@@ -14,7 +14,7 @@ MiniMartialWorld-MiniMartialWorld-CustomSkill
 ## 快速开始（3 步）
 1. 在 `DLLBuilder/` 新建或打开你的 C# 工程（Unity 兼容的 .NET 版本），参照模板添加依赖引用。
 2. 在工程中创建你的事件脚本：实现 `IWorkshopTrainingModifier`（传武堂修炼导入）和 `SkillFactory`（技能工厂）。
-3. 编译生成 `YourMod.dll`，与预览图一起放入 `ContentSample/`，添加对应图片，上传创意工坊即可加载。
+3. 编译生成 `YourMod.dll`，与预览图一起替换 `ContentSample/`中对应元素，上传创意工坊即可加载。
 
 
 ## 示例解析
