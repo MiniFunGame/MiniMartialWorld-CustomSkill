@@ -604,7 +604,7 @@ public class ExtraPoisionBuilder : SkillFactory
             },
             AttributeSelector = skillPro =>
             {
-                int num = 2 + skillPro.Count; // 获取技能使用次数
+                int num = 1 + skillPro.Count; // 获取技能使用次数
                 for (int i = 0; i < num; i++)
                 {
                     PosionEffect poisonEffect = PosionFactory.RandomToxin(); // 随机生成毒
